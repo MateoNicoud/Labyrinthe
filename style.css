@@ -60,3 +60,16 @@ body {
     background-color: #ddd;
     font-weight: bold;
 }
+/* Style pour le personnage (cellule où il se trouve actuellement) */
+.current {
+    background-color: yellow;
+}
+
+/* Style pour les cellules déjà explorées */
+.visited {
+    background-color: lightblue;
+}
+/* Path cells */
+.path {
+    background-color: orange;
+}
