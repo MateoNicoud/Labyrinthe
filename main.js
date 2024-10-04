@@ -1,5 +1,3 @@
-// main.js
-
 let grid; // Déclaration globale de la grille
 
 // Fonction pour générer la grille aléatoire
@@ -7,9 +5,10 @@ function generateRandomCircuit() {
     const rows = parseInt(document.getElementById('rows').value, 10);
     const cols = parseInt(document.getElementById('cols').value, 10);
 
-    grid = new Grid(rows, cols);
+    // Utilisation de la génération avec chemin valide
+    grid = Grid.generateValidGrid(rows, cols);  // Ne pas redéclarer `grid` ici
     grid.render();
-    grid.setStartAndGoal();
+    grid.setStartAndGoal(); // S'assurer de définir le point de départ et d'arrivée après la génération
 }
 
 // Fonction pour résoudre le labyrinthe avec DFS et animation
